@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1ac6ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.About">
+   <children>
+      <TextArea  editable="false" layoutX="74.0" layoutY="61.0" prefHeight="279.0" prefWidth="452.0" style="-fx-background-color: #ffff1a;" text="Here you can write who create this project"/>
+   </children>
+</AnchorPane>

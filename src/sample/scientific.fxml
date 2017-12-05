@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="400.0" style="-fx-background-color: #1ac6ff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+    <children>
+        <MenuBar prefHeight="5.0" prefWidth="324.0" style="-fx-background-color: #1ac6ff;">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#fileOpener" text="Open" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#closeButtonAction" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem accelerator="Shortcut+C" mnemonicParsing="false" onAction="#copy" text="Copy" />
+                        <MenuItem accelerator="Shortcut+V" mnemonicParsing="false" onAction="#paste" text="Paste" />
+                        <MenuItem accelerator="Shortcut+X" mnemonicParsing="false" onAction="#cut" text="Cut" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#simple" text="Simple" />
+                        <MenuItem mnemonicParsing="false" text="Scientific" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#about" text="About " />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Additional task">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#additionalTask" text="function" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane prefHeight="42.0" prefWidth="400.0">
+            <children>
+                <TextField fx:id="textField" alignment="TOP_RIGHT" layoutX="1.0" layoutY="51.0" prefHeight="31.0" prefWidth="400.0" style="-fx-background-color: #1ac6ff;" />
+                <Label fx:id="label" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="6.0" layoutY="14.0" prefHeight="32.0" prefWidth="389.0" style="-fx-background-color: #1ac6ff;" text="Hello user" />
+                <TextField fx:id="textField1" layoutX="247.0" layoutY="51.0" prefHeight="31.0" prefWidth="56.0" text="x" visible="false" />
+                <TextField fx:id="textField2" layoutX="340.0" layoutY="51.0" prefHeight="31.0" prefWidth="56.0" text="y" visible="false" />
+                <Button fx:id="ok" layoutX="303.0" layoutY="51.0" mnemonicParsing="false" onAction="#buttonOK" prefHeight="31.0" prefWidth="37.0" text="ok" visible="false" />
+            </children>
+        </AnchorPane>
+        <GridPane prefHeight="377.0" prefWidth="400.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+            <RowConstraints maxHeight="56.0" minHeight="0.0" prefHeight="56.0" />
+            <RowConstraints maxHeight="111.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="117.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="126.0" minHeight="0.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button mnemonicParsing="false" onAction="#allDelete" prefHeight="91.0" prefWidth="212.0" style="-fx-background-color: #1a53ff;" text="C" textFill="WHITE" GridPane.rowIndex="3" />
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="142.0" prefWidth="286.0" style="-fx-background-color: #1a53ff;" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button layoutX="160.0" layoutY="40.0" mnemonicParsing="false" onAction="#buttonDelete" prefHeight="142.0" prefWidth="286.0" style="-fx-background-color: #1a53ff;" text="Delete" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Button mnemonicParsing="false" onAction="#plus" prefHeight="118.0" prefWidth="282.0" style="-fx-background-color: #ffff1a;" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="110.0" prefWidth="332.0" style="-fx-background-color: #1a53ff;" text="1" textFill="WHITE" GridPane.rowIndex="4" />
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="141.0" prefWidth="279.0" style="-fx-background-color: #1a53ff;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="110.0" prefWidth="285.0" style="-fx-background-color: #1a53ff;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button mnemonicParsing="false" onAction="#minus" prefHeight="167.0" prefWidth="362.0" style="-fx-background-color: #ffff1a;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="209.0" prefWidth="342.0" style="-fx-background-color: #1a53ff;" text="4" textFill="WHITE" GridPane.rowIndex="5" />
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="106.0" prefWidth="264.0" style="-fx-background-color: #1a53ff;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="141.0" prefWidth="263.0" style="-fx-background-color: #1a53ff;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Button mnemonicParsing="false" onAction="#multiply" prefHeight="178.0" prefWidth="259.0" style="-fx-background-color: #ffff1a;" text="*" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="192.0" prefWidth="340.0" style="-fx-background-color: #1a53ff;" text="7" textFill="WHITE" GridPane.rowIndex="6" />
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="216.0" prefWidth="308.0" style="-fx-background-color: #1a53ff;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="173.0" prefWidth="314.0" style="-fx-background-color: #1a53ff;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                <Button mnemonicParsing="false" onAction="#divide" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="/" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#tan" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="tan" GridPane.columnIndex="2" />
+                <Button fx:id="button1" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#mR" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="MR" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="button2" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#mC" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="MC" GridPane.rowIndex="2" />
+                <Button layoutX="85.0" layoutY="10.0" mnemonicParsing="false" onAction="#minimumOfNumbers" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="min(int x, int y)" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button layoutX="160.0" layoutY="10.0" mnemonicParsing="false" onAction="#cos" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="cos" GridPane.columnIndex="1" />
+                <Button layoutX="160.0" layoutY="57.0" mnemonicParsing="false" onAction="#mMinus" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="M-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button layoutX="10.0" layoutY="57.0" mnemonicParsing="false" onAction="#sin" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="sin" />
+                <Button layoutX="235.0" layoutY="50.0" mnemonicParsing="false" onAction="#mPlus" prefHeight="143.0" prefWidth="132.0" style="-fx-background-color: #ffff1a;" text="M+" GridPane.rowIndex="1" />
+                <Button layoutX="110.0" layoutY="73.0" mnemonicParsing="false" onAction="#divide" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="log" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Button layoutX="110.0" layoutY="39.0" mnemonicParsing="false" onAction="#sqrt" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="sqrt" GridPane.columnIndex="3" />
+                <Button layoutX="210.0" layoutY="39.0" mnemonicParsing="false" onAction="#pow" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #ffff1a;" text="^" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#piNumber" prefHeight="61.0" prefWidth="100.0" style="-fx-background-color: #ffff1a;" text="Pi" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+      <HBox prefHeight="74.0" prefWidth="400.0">
+         <children>
+                <Button mnemonicParsing="false" onAction="#initializeNumbers" prefHeight="177.0" prefWidth="338.0" style="-fx-background-color: #1a53ff;" text="." textFill="WHITE" />
+              <Button mnemonicParsing="false" onAction="#equal" prefHeight="81.0" prefWidth="541.0" style="-fx-background-color: #ffff1a;" text="=" />
+         </children>
+      </HBox>
+    </children>
+</VBox>
